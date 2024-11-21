@@ -20,16 +20,21 @@ mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
+
   .then(() => {
     console.log('MongoDB connected');
-    
- 
+     
     app.listen(process.env.PORT, () => {
       console.log(`Server running on port ${process.env.PORT}`);
     });
   })
   .catch((error) => console.log(error));
 
+  // RUK MongoDB connection
+  // mongoose.connect(process.env.MONGO_URI)
+  //     .then(() => console.log('Connected to MongoDB'))
+  //     .catch((error) => console.error('Connection error:', error));
+  
  
 const amadeus = new Amadeus({
   clientId: process.env.AMADEUS_CLIENT_ID,
