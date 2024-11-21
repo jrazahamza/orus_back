@@ -13,6 +13,7 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 
 // API Routes
 app.use('/api/auth', authRoutes);
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
 
 // MongoDB connection
