@@ -9,8 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://orus-back-3bgg.vercel.app/' }));
 
+//app.use(cors({ origin: 'http://localhost:3000' }));
 // API Routes
 app.use('/api/auth', authRoutes);
 app.get("/", (req, res) => res.send("Express on Vercel"));
